@@ -115,3 +115,48 @@ header{
     border: none;
     cursor: pointer;
 }
+
+/* =====CONTAINER TODO===== */
+
+.container-todo{
+    
+    margin-top: 40px;
+}
+
+.container-todo .todo{
+    background-color: #25273C;
+    color: #D9D6D2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 250px;
+    margin: 0 auto;
+    
+
+    width: 688px;
+    height: 80px;
+}
+
+.container-todo .todo h3{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: lighter;
+}
+
+.todo i{
+    border-radius: 50%;
+    padding: 3px;
+    background-color: transparent;
+    border: 1px solid #393B50;
+    color: #393B50;
+    font-size: 20px;
+    cursor: pointer;
+
+    transition: all .3s;
+}
+
+.todo i:hover{
+    border: transparent;
+    background-color: #D9D6D2;
+}
+ 

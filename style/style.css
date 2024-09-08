@@ -1,6 +1,14 @@
 /* FONT POPPINS: font-family: "Poppins", sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root{
+    --color1: #D9D6D2;
+    --color2: #393B50;
+    --color3: #909BC8;
+    --colorbg: #161722;
+    --coloropcional: #25273C;
+}
+
 *{
     
     padding: 0;
@@ -8,12 +16,12 @@
 }
 
 body{
-    background-color: #161722;
+    background-color: var(--colorbg);
 }
 
 header{
     position: relative;
-    background-color: #D9D6D2;
+    background-color: var(--color1);
     height: 250px;
 }
 
@@ -87,7 +95,7 @@ header{
 .todo-add .add-name{
     background-color: transparent;
     padding: 2px 5px;
-    border: 1px solid #393B50;
+    border: 1px solid var(--color2);
     border-top: none;
     display: flex;
     flex-grow: 1;
@@ -104,8 +112,8 @@ header{
     align-items: center;
     justify-content: center;
     
-    background-color: #393B50;
-    color: #D9D6D2;
+    background-color: var(--color2);
+    color: var(--color1);
     font-size: 20px;
     margin-left: 5px;
     
@@ -116,6 +124,11 @@ header{
     cursor: pointer;
 }
 
+.delete-todo,
+.check-todo{
+    background-color: none;
+}
+
 /* =====CONTAINER TODO===== */
 
 .container-todo{
@@ -124,8 +137,8 @@ header{
 }
 
 .container-todo .todo{
-    background-color: #25273C;
-    color: #D9D6D2;
+    background-color: var(--coloropcional);
+    color: var(--color1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,8 +161,8 @@ header{
     border-radius: 50%;
     padding: 3px;
     background-color: transparent;
-    border: 1px solid #393B50;
-    color: #393B50;
+    border: 1px solid var(--color2);
+    color: var(--color2);
     font-size: 20px;
     cursor: pointer;
 
@@ -158,6 +171,17 @@ header{
 
 .todo i:hover{
     border: transparent;
-    background-color: #D9D6D2;
+    background-color: var(--color1);
+}
+
+
+.todo.done{
+    background-color: var(--color1);
+}
+
+.done h3{
+    text-decoration: line-through;
+    color: var(--color2);
+    
 }
  

@@ -175,6 +175,13 @@ header{
 }
 
 
+.todo button{
+    background-color: transparent;
+    border: none;
+}
+
+/* ========================= */
+
 .todo.done{
     background-color: var(--color1);
 }
@@ -184,4 +191,18 @@ header{
     color: var(--color2);
     
 }
- 
+
+.done button i{
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+.done button i:hover{
+    background-color: transparent;
+    color: var(--color2);
+    border: 1px solid var(--color2);
+}
+
+
+
+/* ========================= */

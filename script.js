@@ -4,6 +4,7 @@ let sunButton = document.querySelector('.sun-button')
 let todoAdd = document.querySelector('.todo-add')
 let addName = document.querySelector('.add-name')
 let btnAdd = document.querySelector('.btn-add')
+let containerTodo = document.querySelector('.container-todo')
 
 btnAdd.addEventListener('click', function(){
     let inputValue = addName.value.trim()
@@ -13,7 +14,6 @@ btnAdd.addEventListener('click', function(){
     }
 
     else{
-        let containerTodo = document.querySelector('.container-todo')
 
         let newTodo = document.createElement('div')
         newTodo.classList.add('todo')
@@ -31,7 +31,7 @@ btnAdd.addEventListener('click', function(){
         newTodo.appendChild(todoTitle)
         
         let deleteBtn = document.createElement('button')
-        deleteBtn.classList.add('delete-tood')
+        deleteBtn.classList.add('delete-todo')
         deleteBtn.innerHTML = "<i class='bx bx-trash'></i>"
         newTodo.appendChild(deleteBtn)
         
@@ -43,14 +43,16 @@ btnAdd.addEventListener('click', function(){
     }
 })
 
-document.querySelector('.container-todo').addEventListener('click', (e) => {
+document.addEventListener('click', (e) => {
         let elTarget = e.target;
         let parentTarget = elTarget.closest('div');
 
-        if(elTarget.classList.contains('delete-tood')){
-            if(parentTarget){
+        if(elTarget.classList.contains('delete-todo')){
                 parentTarget.remove()
-            }
+        }
+
+        if(elTarget.classList.contains('check-todo')){
+            parentTarget.classList.toggle('done')
         }
 })
 

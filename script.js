@@ -44,27 +44,19 @@ btnAdd.addEventListener('click', function(){
     }
 })
 
-document.addEventListener('click', (e)=> {
-    let elTarget = e.target;
-    let parentTarget = elTarget.closest('div');
+
+document.addEventListener('click', (e) => {
+        let elTarget = e.target;
+        let parentTarget = elTarget.closest('div');
+
+        if(elTarget.classList.contains('delete-todo')){
+                parentTarget.remove()
+        }
+
+        if(elTarget.classList.contains('check-todo')){
+            parentTarget.classList.toggle('done')
+        }
 })
-
-function deleteClick(){
-    
-}
-
-// document.addEventListener('click', (e) => {
-//         let elTarget = e.target;
-//         let parentTarget = elTarget.closest('div');
-
-//         if(elTarget.classList.contains('delete-todo')){
-//                 parentTarget.remove()
-//         }
-
-//         if(elTarget.classList.contains('check-todo')){
-//             parentTarget.classList.toggle('done')
-//         }
-// })
 
 
 

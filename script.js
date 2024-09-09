@@ -32,6 +32,7 @@ btnAdd.addEventListener('click', function(){
         
         let deleteBtn = document.createElement('button')
         deleteBtn.classList.add('delete-todo')
+        deleteBtn.setAttribute('onclick', 'deleteClick()');
         deleteBtn.innerHTML = "<i class='bx bx-trash'></i>"
         newTodo.appendChild(deleteBtn)
         
@@ -43,17 +44,27 @@ btnAdd.addEventListener('click', function(){
     }
 })
 
-document.addEventListener('click', (e) => {
-        let elTarget = e.target;
-        let parentTarget = elTarget.closest('div');
-
-        if(elTarget.classList.contains('delete-todo')){
-                parentTarget.remove()
-        }
-
-        if(elTarget.classList.contains('check-todo')){
-            parentTarget.classList.toggle('done')
-        }
+document.addEventListener('click', (e)=> {
+    let elTarget = e.target;
+    let parentTarget = elTarget.closest('div');
 })
+
+function deleteClick(){
+    
+}
+
+// document.addEventListener('click', (e) => {
+//         let elTarget = e.target;
+//         let parentTarget = elTarget.closest('div');
+
+//         if(elTarget.classList.contains('delete-todo')){
+//                 parentTarget.remove()
+//         }
+
+//         if(elTarget.classList.contains('check-todo')){
+//             parentTarget.classList.toggle('done')
+//         }
+// })
+
 
 

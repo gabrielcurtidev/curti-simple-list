@@ -6,7 +6,9 @@ let addName = document.querySelector('.add-name')
 let btnAdd = document.querySelector('.btn-add')
 let containerTodo = document.querySelector('.container-todo')
 
-btnAdd.addEventListener('click', function(){
+btnAdd.addEventListener('click', function(e){
+    e.preventDefault()
+
     let inputValue = addName.value.trim()
 
     if(inputValue === ''){
@@ -57,6 +59,3 @@ document.addEventListener('click', (e) => {
             parentTarget.classList.toggle('done')
         }
 })
-
-
-

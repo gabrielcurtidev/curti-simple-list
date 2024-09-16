@@ -34,7 +34,7 @@ btnAdd.addEventListener('click', function(e){
         
         let deleteBtn = document.createElement('button')
         deleteBtn.classList.add('delete-todo')
-        deleteBtn.setAttribute('onclick', 'deleteClick()');
+        // deleteBtn.setAttribute('onclick', 'deleteClick()');
         deleteBtn.innerHTML = "<i class='bx bx-trash'></i>"
         newTodo.appendChild(deleteBtn)
         
@@ -59,3 +59,5 @@ document.addEventListener('click', (e) => {
             parentTarget.classList.toggle('done')
         }
 })
+
+

@@ -205,3 +205,21 @@ header{
 
 
 /* ========================= */
+
+.start-sun.bright{
+    background-color: var(--colorbg);
+    color: var(--color1);
+}
+
+.sun-button.bright{
+    color: var(--color1);
+    text-shadow: 0 0 10px var(--color1);
+}
+
+#icon-insta.bright{
+    color: var(--color1);
+}
+
+.container-todo.bright{
+    background-color: var(--color1);
+}

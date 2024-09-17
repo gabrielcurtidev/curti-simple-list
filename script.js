@@ -49,15 +49,17 @@ btnAdd.addEventListener('click', function(e){
 
 document.addEventListener('click', (e) => {
         let elTarget = e.target;
-        let parentTarget = elTarget.closest('div');
+        let parentTarget = elTarget.closest('.todo');
+        let elTodo = document.querySelector('.todo')
 
         if(elTarget.classList.contains('delete-todo')){
-                parentTarget.remove()
+                elTodo.remove()
         }
 
         if(elTarget.classList.contains('check-todo')){
             parentTarget.classList.toggle('done')
         }
+
 })
 
 

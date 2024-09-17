@@ -206,6 +206,10 @@ header{
 
 /* ========================= */
 
+.bright{
+
+}
+
 .start-sun.bright{
     background-color: var(--colorbg);
     color: var(--color1);
@@ -220,6 +224,18 @@ header{
     color: var(--color1);
 }
 
-.container-todo.bright{
+body.bright{
     background-color: var(--color1);
+}
+
+.add-name.bright{
+    color: var(--color1);
+}
+
+.start-sun,
+.sun-button,
+#icon-insta,
+.add-name,
+body{
+    transition: all .5s;
 }

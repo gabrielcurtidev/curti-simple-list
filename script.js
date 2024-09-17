@@ -1,6 +1,5 @@
 let todoName = document.querySelector('.todo-name')
 let nameBtn = document.querySelector('.name-btn')
-let sunButton = document.querySelector('.sun-button')
 let todoAdd = document.querySelector('.todo-add')
 let addName = document.querySelector('.add-name')
 let btnAdd = document.querySelector('.btn-add')
@@ -50,16 +49,31 @@ btnAdd.addEventListener('click', function(e){
 document.addEventListener('click', (e) => {
         let elTarget = e.target;
         let parentTarget = elTarget.closest('.todo');
-        let elTodo = document.querySelector('.todo')
 
         if(elTarget.classList.contains('delete-todo')){
-                elTodo.remove()
+                parentTarget.remove()
         }
-
         if(elTarget.classList.contains('check-todo')){
-            parentTarget.classList.toggle('done')
+                parentTarget.classList.toggle('done')
         }
 
+        
 })
 
+function btnLuz(){
+        let sunButton = document.querySelector('.sun-button')
+        let startSun = document.querySelector('.start-sun')
+        let iconsInsta = document.querySelector('#icon-insta')
+        let addName = document.querySelector('.add-name')
+        let todoBtn = document.querySelector('.todo')
+
+        sunButton.classList.toggle('bright')
+        startSun.classList.toggle('bright')
+        iconsInsta.classList.toggle('bright')
+        addName.classList.toggle('bright')
+        document.body.classList.toggle('bright')
+        todoBtn.classList.toggle('done')
+
+
+}
 

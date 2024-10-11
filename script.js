@@ -1,3 +1,4 @@
+
 let todoName = document.querySelector('.todo-name')
 let nameBtn = document.querySelector('.name-btn')
 let todoAdd = document.querySelector('.todo-add')
@@ -48,17 +49,22 @@ btnAdd.addEventListener('click', function(e){
 
 document.addEventListener('click', (e) => {
         let elTarget = e.target;
-        let parentTarget = elTarget.closest('.todo');
-
-        if(elTarget.classList.contains('delete-todo')){
-                parentTarget.remove()
-        }
-        if(elTarget.classList.contains('check-todo')){
-                parentTarget.classList.toggle('done')
-        }
-
         
-})
+        // Verifica se o clique foi no ícone dentro do botão e ajusta o alvo para o botão
+        if (elTarget.tagName.toLowerCase() === 'i') {
+            elTarget = elTarget.parentElement;
+        }
+        
+        let parentTarget = elTarget.closest('.todo');
+    
+        if (elTarget.classList.contains('delete-todo')) {
+            parentTarget.remove();
+        }
+        if (elTarget.classList.contains('check-todo')) {
+            parentTarget.classList.toggle('done');
+        }
+    });
+    
 
 function btnLuz(){
         let sunButton = document.querySelector('.sun-button')

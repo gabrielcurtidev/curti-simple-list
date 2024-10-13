@@ -6,29 +6,30 @@
     <!-- CSS -->
      <link rel="stylesheet" href="style/style.css">
 
+     <!-- FAVICON -->
+      <link rel="shortcut icon" href="favicon/favicon-icon.ico" type="image/x-icon">
+
      <!-- BOX ICONS -->
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
-    <title>SIMPLE LIST</title>
+    <title>SIMPLE TO-DO-LIST</title>
 </head>
 <body>
     
-    <header class="start-sun">
+    
+    <header class="container-header">
         <nav class="navbar">
             <i id="logo" class='bx bx-book-open'></i>
         
-            <a href="#">
+            <a href="https://www.instagram.com/bieldesig/" target="_blank">
                 <i id="icon-insta" class='bx bxl-instagram'></i>
             </a>
         </nav>
         
         <div class="todo-name">
             <div class="name-btn">
-                <h1>
+                <h1 class="msg">
                     CURTI LIST
                 </h1>
-                <button class="sun-button" onclick="btnLuz()">
-                    <i class='bx bxs-sun'></i>
-                </button>
             </div>
             
             <div class="todo-add">
@@ -42,7 +43,7 @@
     </header>
 
     <div class="container-todo">
-
+<!-- 
         <div class="todo">
             <button class="check-todo">
                 <i  class='bx bx-check'></i>
@@ -51,9 +52,13 @@
             <button class="delete-todo">
                 <i class='bx bx-trash'></i>
             </button>
-        </div>
+        </div> -->
         
     </div>
+
+    <footer>
+        <p>&copy; 2024 <a href="https://www.instagram.com/bieldesig/" target="_blank">Curti Dev</a>. Todos os direitos reservados.</p>
+      </footer>
 
     <script src="script.js"></script>
 </body>

@@ -49,14 +49,13 @@ btnAdd.addEventListener('click', function(e){
 
 document.addEventListener('click', (e) => {
         let elTarget = e.target;
+        let parentTarget = elTarget.closest('.todo');
         
         // Verifica se o clique foi no ícone dentro do botão e ajusta o alvo para o botão
         if (elTarget.tagName.toLowerCase() === 'i') {
             elTarget = elTarget.parentElement;
         }
-        
-        let parentTarget = elTarget.closest('.todo');
-    
+
         if (elTarget.classList.contains('delete-todo')) {
             parentTarget.remove();
         }
@@ -66,20 +65,28 @@ document.addEventListener('click', (e) => {
     });
     
 
-function btnLuz(){
-        let sunButton = document.querySelector('.sun-button')
-        let startSun = document.querySelector('.start-sun')
-        let iconsInsta = document.querySelector('#icon-insta')
-        let addName = document.querySelector('.add-name')
-        let todoBtn = document.querySelector('.todo')
+// function btnLuz(){
+//         let containerHeader = document.querySelector('.container-header')
+//         let iconsInsta = document.querySelector('#icon-insta')
+//         let addName = document.querySelector('.add-name')
+//         let todoBtn = document.querySelector('.todo')
 
-        sunButton.classList.toggle('bright')
-        startSun.classList.toggle('bright')
-        iconsInsta.classList.toggle('bright')
-        addName.classList.toggle('bright')
-        document.body.classList.toggle('bright')
-        todoBtn.classList.toggle('done')
+//         containerHeader.classList.toggle('bright')
+//         iconsInsta.classList.toggle('bright')
+//         addName.classList.toggle('bright')
+//         document.body.classList.toggle('bright')
+//         todoBtn.classList.toggle('done')
 
 
-}
+// }
+
+
+
+// window.addEventListener('load', function() {
+//     setTimeout(function() {
+//       document.getElementById('splash-screen').style.display = 'none';
+//       document.getElementById('main-content').style.display = 'block';
+//     }, 3000); // 3000 milissegundos = 3 segundos
+//   });
+  
 

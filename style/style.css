@@ -25,6 +25,8 @@ header{
     height: 250px;
 }
 
+
+
 /* =====NAVBAR===== */
 
 .navbar{
@@ -70,18 +72,12 @@ header{
 .name-btn h1{
     font-family: "Poppins", sans-serif;
     font-weight: bold;
-    letter-spacing: 6px;
+    letter-spacing: 5px;
     font-size: 1.2rem;
 
 }
 
-.name-btn .sun-button{
-    border: none;
-    font-size: 25px;
-    cursor: pointer;
-    background-color: transparent;
-    
-}
+
 
 
 .todo-add{
@@ -203,39 +199,42 @@ header{
 }
 
 
+footer {
+    background-color: var(--color2);
+    color: var(--color1);
+    font-family: "Poppins", sans-serif;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+}
+
+
+footer a {
+    color: var(--color1);
+    text-decoration: none;
+    transition: all .3s;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
 
 /* ========================= */
 
-.bright{
+@media screen and (max-width: 470px){
 
-}
+   .todo-name{
+    width: 300px;
+   }
+   
+   .container-todo .todo{
+    width: 350px;
+   }
 
-.start-sun.bright{
-    background-color: var(--colorbg);
-    color: var(--color1);
-}
-
-.sun-button.bright{
-    color: var(--color1);
-    text-shadow: 0 0 10px var(--color1);
-}
-
-#icon-insta.bright{
-    color: var(--color1);
-}
-
-body.bright{
-    background-color: var(--color1);
-}
-
-.add-name.bright{
-    color: var(--color1);
-}
-
-.start-sun,
-.sun-button,
-#icon-insta,
-.add-name,
-body{
-    transition: all .5s;
 }

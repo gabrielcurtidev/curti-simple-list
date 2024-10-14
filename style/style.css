@@ -70,13 +70,35 @@ header{
 }
 
 .name-btn h1{
-    font-family: "Poppins", sans-serif;
+    font-family: monospace;
     font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     font-size: 1.2rem;
 
 }
 
+.msg{
+    font-family: monospace;
+    border-right: 10px solid;
+    width: 13.5ch;
+    white-space: nowrap;
+    overflow: hidden;
+
+    animation: typing 6s steps(13) infinite,
+    blinking .6s step-end infinite;
+}
+
+@keyframes typing{
+    50%{
+        width: 0;
+    }
+}
+
+@keyframes blinking {
+    50%{
+        border-color: transparent;
+    }
+}
 
 
 
@@ -237,4 +259,24 @@ footer a:hover {
     width: 350px;
    }
 
+   .container-todo .todo h3{
+    font-size: 1rem;
 }
+
+}
+
+@media screen and (max-width: 330px){
+
+    .todo-name{
+     width: 250px;
+    }
+    
+    .container-todo .todo{
+     width: 260px;
+    }
+
+    .container-todo .todo h3{
+        font-size: .85rem;
+    }
+ 
+ }

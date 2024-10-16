@@ -28,7 +28,7 @@ body{
     animation: end-animation 1s 6s forwards;
 
     & h1{
-        font-family: monospace;
+        font-family: monospace, 'Courier New', Courier, monospace;
         color: var(--color1);
         font-size: .8rem;
         margin: 4px;
